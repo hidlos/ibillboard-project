@@ -3,7 +3,6 @@ var requestHandlers = require("./requestHandlers"); // import našeho modulu requ
 
 var routingTable = {};
 routingTable["/"] = requestHandlers.default;
-routingTable["/start"] = requestHandlers.default;
 routingTable["/track"] = requestHandlers.track;
 
 module.exports = routingTable; 
