@@ -1,0 +1,17 @@
+{
+  "name": "ibillboard-project",
+  "version": "0.0.1",
+  "description": "ibillboard job interview project",
+  "author": {
+    "name": "Adam Cink",
+    "email": "adam.cink@email.cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hidlos/ibillboard-project"
+  },
+  "dependencies": {
+    "macaddress": "*",
+    "redis": "*"
+  }
+}
