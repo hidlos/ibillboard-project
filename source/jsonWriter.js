@@ -9,7 +9,6 @@ function WriteJson(GETvariables,redisClient,sessionID) {
   fs.readFile(IOmanageFile, 'utf8', function(err, data) { // ètu soubor IOmanage
     if (data.length) { // obsahuje-li nìco, volám opìt tuto funkci v náhodnì vygenerovaný èas
       var msc =  randomBetweenTwoNumbers.randomize(1,50);
-      console.log("nemuzu zapisovat, cekam "+msc+" milisekund");
       setTimeout(function() {
         WriteJson(GETvariables,redisClient,sessionID);
       }, msc)
