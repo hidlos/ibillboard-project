@@ -1,12 +1,12 @@
 
-var macaddress = require('macaddress'); // potøebuji k získání MAC -> jedineèná identifikace (není úplnì nutné)
+var macaddress = require('macaddress'); 
 var jsonWriter = require("./jsonWriter.js");
 
-function track(response,GETvariables,redisClient) { // když je pathname /track -> pøijímáme GET parametry
+function track(response,GETvariables,redisClient) { 
   console.log("Request handler 'track' was called.");
-    macaddress.one(function (err, mac) { // získání MAC adresy
+    macaddress.one(function (err, mac) { 
       var d = new Date();
-      var sessionID = mac+"-"+d.getTime(); // string "mac-èas_v_milisekundách" = session id
+      var sessionID = mac+"-"+d.getTime(); 
       jsonWriter.writeJson(GETvariables,redisClient,sessionID); 
   });
   response.writeHead(200, {"Content-Type": "text/plain"});
@@ -14,7 +14,7 @@ function track(response,GETvariables,redisClient) { // když je pathname /track -
   response.end();
 }
 
-function Default(response) { // pokud nìkdo nezaná /xxx nebo zadá jen adresu a port, zobrazí se mu jednoduchý formuláø
+function Default(response) {
   console.log("Request handler 'start' was called.");
   response.writeHead(200, {"Content-Type": "text/html"});
   response.write("Welcome!");

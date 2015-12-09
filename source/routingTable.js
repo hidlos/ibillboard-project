@@ -1,5 +1,5 @@
 
-var requestHandlers = require("./requestHandlers"); // import našeho modulu requestHandlers
+var requestHandlers = require("./requestHandlers"); 
 
 var routingTable = {};
 routingTable["/"] = requestHandlers.default;
