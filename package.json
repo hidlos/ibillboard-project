@@ -2,6 +2,9 @@
   "name": "ibillboard-project",
   "version": "0.0.1",
   "description": "ibillboard job interview project",
+  "scripts": {
+    "test": "node_modules/.bin/mocha.cmd --reporter spec"
+  },
   "author": {
     "name": "Adam Cink",
     "email": "adam.cink@email.cz"
@@ -12,6 +15,12 @@
   },
   "dependencies": {
     "macaddress": "*",
-    "redis": "*"
+    "redis": "*",
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "express": "^4.13.3",
+    "mocha": "^2.3.4",
+    "request": "^2.67.0"
   }
 }
