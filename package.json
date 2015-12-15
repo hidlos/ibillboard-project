@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "macaddress": "*",
-    "redis": "*",
+    "redis": "*"
   },
   "devDependencies": {
     "chai": "^3.4.1",
